@@ -1,0 +1,43 @@
+<ion-view view-title="Control Panel">
+
+    <ion-nav-buttons side="left">
+        <button class="button button-clear button-positive" ng-click="actions.openSaveControls($event)">Save</button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-positive" ng-click="actions.openAddControl()">New</button>
+    </ion-nav-buttons>
+
+    <ion-header-bar class="bar-subheader">
+        <div class="button-bar">
+            <button class="button button-small button-positive button-outline" ng-click="actions.clearPanel()">
+                Clear panel
+            </button>
+            <button class="button button-small button-positive button-outline" ng-click="actions.shutdownGpio()">
+                Shutdown GPIO
+            </button>
+           </div>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="list">
+            <div id="toggleContainer"></div>
+            <div id="sliderContainer"></div>
+
+            <!--<ion-toggle ng-model="model.toggled" ng-change="actions.toggle()">LED @ GPIO 3</ion-toggle>
+
+            <slider left-icon-class-name="ion-ios-lightbulb-outline"
+                    right-icon-class-name="ion-ios-lightbulb"
+                    min-value="0"
+                    max-value="1000"
+                    start-value="0"
+                    on-slide-model="model.brightness"></slider>
+
+            <slider left-icon-class-name="ion-ios-cog-outline"
+                    right-icon-class-name="ion-ios-cog"
+                    min-value="0"
+                    max-value="1000"
+                    start-value="0"
+                    on-slide-model="model.serveAngle"></slider>-->
+        </div>
+    </ion-content>
+</ion-view>

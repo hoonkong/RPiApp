@@ -1,0 +1,25 @@
+<ion-view view-title="Settings">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Server url</span>
+                <input type="text"
+                       placeholder="Enter server url here"
+                       ng-blur="actions.setServerUrl()"
+                       ng-focus="actions.setDefaultHttp()"
+                       ng-model="settings.serverUrl">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Camera server url</span>
+                <input type="text"
+                       placeholder="Enter camera server url here"
+                       ng-blur="actions.setCameraServerUrl()"
+                       ng-focus="actions.setDefaultHttp()"
+                       ng-model="settings.cameraServerUrl">
+            </label>
+
+            <ion-toggle ng-model="settings.enableDebugMode" ng-change="actions.setDebugMode()">Enable debug mode</ion-toggle>
+        </div>
+    </ion-content>
+</ion-view>

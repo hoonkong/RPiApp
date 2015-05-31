@@ -1,0 +1,16 @@
+<ion-view view-title="Saved Panels">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear button-positive" ng-click="actions.toggleDeleteMode()">{{viewModel.toggleDeleteButtonText}}</button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list can-swipe="true" show-delete="model.showDelete">
+            <ion-item ng-repeat="controlPanel in model.controlPanels track by $index"
+                      ng-click="actions.showPanelDetails(controlPanel)">
+                <ion-delete-button class="ion-minus-circled"
+                                   ng-click="actions.deletePanel($index, controlPanel)">
+                </ion-delete-button>
+                {{controlPanel}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

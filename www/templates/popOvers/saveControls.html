@@ -1,0 +1,13 @@
+<ion-popover-view class="saveControls">
+    <ion-header-bar>
+        <h1 class="title">Save this panel</h1>
+    </ion-header-bar>
+    <ion-content scroll="false">
+        <label class="item item-input">
+            <input type="text" placeholder="Name this panel" ng-model="model.panelName">
+        </label>
+        <button class="button button-positive button-clear button-block" ng-click="actions.saveControls()">
+            Save <i class="icon icon-right ion-ios-checkmark-empty" ng-if="model.panelSaved"></i>
+        </button>
+    </ion-content>
+</ion-popover-view>

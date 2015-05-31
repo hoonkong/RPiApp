@@ -1,0 +1,56 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <div class="buttons">
+            <button class="button button-clear button-positive" ng-click="actions.closeModal()">Cancel</button>
+        </div>
+        <h1 class="title">New Control</h1>
+        <div class="buttons">
+            <button class="button button-clear button-positive"  ng-click="actions.addControl()">Add</button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list">
+            <div class="item item-divider item-icon-right">
+                Set properties
+            </div>
+            <label class="item item-input">
+                <input type="text" placeholder="Name this control" ng-model="model.controlName">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    GPIO
+                </div>
+                <select ng-model="model.gpio">
+                    <option value=""></option>
+                    <option ng-repeat="n in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]" value="{{n}}">{{n}}</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="list">
+            <div class="item item-divider item-icon-right">
+                Control type
+            </div>
+            <ion-radio class="item" ng-model="model.controlType" ng-value="'toggle'">Toggle</ion-radio>
+            <ion-radio class="item" ng-model="model.controlType" ng-value="'slide'">Slide</ion-radio>
+            <ion-radio class="item" ng-model="model.controlType" ng-value="'valueSetter'">Value setter</ion-radio>
+        </div>
+
+        <div class="list">
+            <div ng-show="model.controlType === 'slide'">
+                <div class="item item-divider item-icon-right">
+                    Slide properties
+                </div>
+                <label class="item item-input">
+                    <input type="text" placeholder="Enter max value" ng-model="model.maxValue">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Enter min value" ng-model="model.minValue">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Enter start value" ng-model="model.startValue">
+                </label>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,16 @@
+<div class="item item-divider">
+    Value setter for {{controlName}}
+</div>
+<div class="item item-input-inset">
+    <label class="item-input-wrapper">
+        <input type="text" placeholder="value" ng-model="model.value">
+    </label>
+    <button class="button button-clear button-positive"
+            ng-click="actions.toggleValue()">
+        <!--<i class="icon ion-ios-circle-outline" ng-if="model.setValue"></i>
+        <i class="icon ion-ios-circle-filled" ng-if="!model.setValue"></i>-->
+
+        <i class="icon ion-ios-circle-outline" ng-if="!model.valueSent"></i>
+        <ion-spinner icon="ripple" class="spinner-positive" ng-if="model.valueSent" style="display: inline-block; margin-top: 7px;"></ion-spinner>
+    </button>
+</div>

@@ -1,0 +1,37 @@
+/* Empty. Add your own CSS if you like */
+div.item.item-toggle span {
+    font-weight: 500;
+}
+
+.saveControls.popover {
+    height: 170px !important;
+}
+
+.center-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+img.video {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+button.shrinkBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 15;
+}
+
+div.tab-nav-hide {
+    display: none;
+}

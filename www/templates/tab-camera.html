@@ -1,0 +1,23 @@
+<ion-view view-title="Camera" hide-nav-bar="model.isFullScreen">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear button-positive" ng-click="actions.stopCamera()">Stop</button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear button-positive" ng-click="actions.goFullScreen()">Full</button>
+    </ion-nav-buttons>
+
+    <ion-content scroll="false" ng-class="{'has-tabs': !model.isFullScreen}">
+        <img src="{{model.cameraServerUrl}}" ng-show="model.showVideo" class="video">
+        <button class="button button-outline button-positive icon ion-arrow-shrink shrinkBtn"
+                ng-if="model.isFullScreen"
+                ng-click="actions.exitFullScreen()"></button>
+
+        <button class="button button-outline button-positive center-middle"
+                ng-if="!model.showStartStreamBtn && model.isServerManuallyStopped && !model.showVideo"
+                ng-click="actions.startServer()">Tap here to start</button>
+        <button class="button button-outline button-positive center-middle"
+                ng-if="model.showStartStreamBtn && !model.isServerManuallyStopped && !model.showVideo"
+                ng-click="actions.startVideo()"
+                ng-disabled="!model.cameraEnabled">Tap here to start stream</button>
+    </ion-content>
+</ion-view>
